@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-builder",
-    "build-mac": "electron-builder --dir",
+    "build-mac": "electron-builder --mac",
     "build-win": "electron-builder --win --ia32"
   },
   "repository": "https://github.com/electron/electron-quick-start",
@@ -20,7 +20,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^4.0.2",
+    "electron": "^4.2.8",
     "electron-builder": "^21.2.0"
   },
   "build": {

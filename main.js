@@ -33,7 +33,7 @@ function createWindow () {
   // 内管
   // win.loadURL('http://manager-app:9001')
   // 是否显示控制台
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
   // 关闭当前窗口后触发
   win.on('closed', () => {
     win = null

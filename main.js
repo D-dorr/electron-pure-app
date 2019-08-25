@@ -28,10 +28,10 @@ function createWindow () {
     win.show()
     win.focus()
   })
-  // demo
-  win.loadURL('http://192.168.1.151:9000/login')
+  // demo这里是要跳的前端地址s
+  // win.loadURL('http://192.168.1.151:9000/login')
   // 内管
-  // win.loadURL('http://manager-app:9001')
+  win.loadURL('http://manager-app:9001')
   // 是否显示控制台
   // win.webContents.openDevTools()
   // 关闭当前窗口后触发

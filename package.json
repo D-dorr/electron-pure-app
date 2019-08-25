@@ -1,0 +1,87 @@
+{
+  "name": "springcloud-demo-app",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build-mac": "electron-builder --dir",
+    "build-win": "electron-builder --win --ia32"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^4.0.2",
+    "electron-builder": "^21.2.0"
+  },
+  "build": {
+    "appId": "springcloud.demo.app",
+    "copyright": "Y",
+    "productName": "springcloud.demo客户端",
+    "asar": true,
+    "mac": {
+      "icon": "build/icons4x.png",
+      "category": "public.app-category.finance",
+      "entitlements": "build/entitlements.mac.plist",
+      "extendInfo": {
+        "ElectronTeamID": "6Q7DE5C2G4",
+        "com.apple.developer.team-identifier": "6Q7DE5C2G4",
+        "com.apple.application-identifier": "6Q7DE5C2G4springcloud.demo.app"
+      },
+      "target": [
+        {
+          "target": "dmg"
+        },
+        {
+          "target": "zip"
+        }
+      ]
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "win": {
+      "icon": "build/icons4x.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/installerIcon_120.ico",
+      "uninstallerIcon": "build/uninstallerIcon_120.ico",
+      "installerHeaderIcon": "build/installerHeaderIcon_120.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "compression": "maximum"
+  }
+}

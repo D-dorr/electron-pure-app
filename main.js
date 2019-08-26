@@ -20,7 +20,9 @@ function createWindow () {
       defaultFontFamily: {
         standard: 'Microsoft YaHei'
       },
-      defaultEncoding: 'utf-8'
+      defaultEncoding: 'utf-8',
+      // https://electronjs.org/docs/faq
+      nodeIntegration: false
     }
   })
 

@@ -230,30 +230,6 @@ if (process.platform === 'darwin') {
       }, {
         label: '显示全部',
         role: 'unhide'
-      }, {
-        type: 'separator'
-      }, {
-        label: '退出',
-        accelerator: 'Command+Q',
-        click: () => {
-          app.quit()
-        }
-      }
-    ]
-  })
-  template.push({
-    label: '编辑',
-    visible: false,
-    submenu: [
-      {
-        label: '撤销',
-        accelerator: 'CmdOrCtrl+Z',
-        role: 'undo'
-      },
-      {
-        label: '重做',
-        accelerator: 'CmdOrCtrl+Y',
-        role: 'redo'
       },
       {type: 'separator'},
       {
@@ -280,11 +256,19 @@ if (process.platform === 'darwin') {
         label: '删除',
         accelerator: 'Delete',
         role: 'delete'
+      }, {
+        type: 'separator'
+      }, {
+        label: '退出',
+        accelerator: 'Command+Q',
+        click: () => {
+          app.quit()
+        }
       }
     ]
   })
   // 窗口菜单.
-  template[3].submenu.push({
+  template[2].submenu.push({
     type: 'separator'
   }, {
     label: '前置所有',

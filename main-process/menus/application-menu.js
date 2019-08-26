@@ -284,7 +284,7 @@ if (process.platform === 'darwin') {
     ]
   })
   // 窗口菜单.
-  template[2].submenu.push({
+  template[3].submenu.push({
     type: 'separator'
   }, {
     label: '前置所有',

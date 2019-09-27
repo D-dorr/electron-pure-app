@@ -1,7 +1,13 @@
 const {app, BrowserWindow} = require('electron')
 const electron = require('electron')
 const {requireModule} = require('./background-util')
+const fs = require('fs')
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
 requireModule()
+
+global.sharedObj = {
+  fsModel: fs
+}
 let win
 let electronScreen
 function createWindow () {
@@ -10,8 +16,8 @@ function createWindow () {
   let height = parseInt(size.height * 1)
   win = new BrowserWindow({
     show: false,
-    width: 1200,
-    height: 800,
+    width: width,
+    height: height,
     minWidth: 1250,
     minHeight: 600,
     backgroundColor: '#f0eff4',
@@ -22,7 +28,7 @@ function createWindow () {
       },
       defaultEncoding: 'utf-8',
       // https://electronjs.org/docs/faq
-      nodeIntegration: false
+      nodeIntegration: true
     }
   })
 
@@ -30,12 +36,12 @@ function createWindow () {
     win.show()
     win.focus()
   })
+  // 是否显示控制台
+  win.webContents.openDevTools()
   // demo这里是要跳的前端地址s
   // win.loadURL('http://192.168.1.151:9000/login')
   // 内管
   win.loadURL('http://manager-app:9001')
-  // 是否显示控制台
-  // win.webContents.openDevTools()
   // 关闭当前窗口后触发
   win.on('closed', () => {
     win = null

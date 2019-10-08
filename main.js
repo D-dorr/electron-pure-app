@@ -37,7 +37,7 @@ function createWindow () {
     win.focus()
   })
   // 是否显示控制台
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
   // demo这里是要跳的前端地址s
   // win.loadURL('http://192.168.1.151:9000/login')
   // 内管

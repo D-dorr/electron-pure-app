@@ -2,6 +2,7 @@ const {app, BrowserWindow} = require('electron')
 const electron = require('electron')
 const {requireModule} = require('./background-util')
 const fs = require('fs')
+const path = require('path')
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
 requireModule()
 
@@ -38,10 +39,7 @@ function createWindow () {
   })
   // 是否显示控制台
   // win.webContents.openDevTools()
-  // demo这里是要跳的前端地址s
-  // win.loadURL('http://192.168.1.151:9000/login')
-  // 内管
-  win.loadURL('http://manager-app:9001')
+  win.loadURL(path.join('file://', __dirname, '/index.html'))
   // 关闭当前窗口后触发
   win.on('closed', () => {
     win = null

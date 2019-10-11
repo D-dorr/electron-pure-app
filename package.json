@@ -1,5 +1,5 @@
 {
-  "name": "springcloud-demo-app",
+  "name": "electron-demo-app",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -24,18 +24,18 @@
     "electron-builder": "^21.2.0"
   },
   "build": {
-    "appId": "springcloud.demo.app",
+    "appId": "electron.demo.app",
     "copyright": "Y",
-    "productName": "springcloud.demo客户端",
+    "productName": "electron纯净版客户端",
     "asar": true,
     "mac": {
-      "icon": "build/icons4x.png",
+      "icon": "build/app.ico",
       "category": "public.app-category.finance",
       "entitlements": "build/entitlements.mac.plist",
       "extendInfo": {
         "ElectronTeamID": "6Q7DE5C2G4",
         "com.apple.developer.team-identifier": "6Q7DE5C2G4",
-        "com.apple.application-identifier": "6Q7DE5C2G4springcloud.demo.app"
+        "com.apple.application-identifier": "6Q7DE5C2G4electron.demo.app"
       },
       "target": [
         {
@@ -62,7 +62,7 @@
       ]
     },
     "win": {
-      "icon": "build/icons4x.png",
+      "icon": "build/app.ico",
       "target": [
         {
           "target": "nsis",
@@ -76,9 +76,6 @@
       "oneClick": false,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
-      "installerIcon": "build/installerIcon_120.ico",
-      "uninstallerIcon": "build/uninstallerIcon_120.ico",
-      "installerHeaderIcon": "build/installerHeaderIcon_120.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true
     },

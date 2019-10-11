@@ -1,5 +1,5 @@
 {
-  "name": "electron-demo-app",
+  "name": "electron-pure-app",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -23,7 +23,7 @@
     "electron-builder": "^21.2.0"
   },
   "build": {
-    "appId": "electron.demo.app",
+    "appId": "electron-pure-app",
     "copyright": "Y",
     "productName": "electron纯净版客户端",
     "asar": true,
@@ -34,7 +34,7 @@
       "extendInfo": {
         "ElectronTeamID": "6Q7DE5C2G4",
         "com.apple.developer.team-identifier": "6Q7DE5C2G4",
-        "com.apple.application-identifier": "6Q7DE5C2G4electron.demo.app"
+        "com.apple.application-identifier": "6Q7DE5C2G4eelectron-pure-app"
       },
       "target": [
         {

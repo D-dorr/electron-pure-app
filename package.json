@@ -1,5 +1,5 @@
 {
-  "name": "springcloud-demo-app",
+  "name": "electron-pure-app",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -24,9 +24,9 @@
     "electron-builder": "^21.2.0"
   },
   "build": {
-    "appId": "springcloud.demo.app",
+    "appId": "electron-pure.app",
     "copyright": "Y",
-    "productName": "springcloud.demo客户端",
+    "productName": "electron-pure客户端",
     "asar": true,
     "mac": {
       "icon": "build/icons4x.png",
@@ -35,7 +35,7 @@
       "extendInfo": {
         "ElectronTeamID": "6Q7DE5C2G4",
         "com.apple.developer.team-identifier": "6Q7DE5C2G4",
-        "com.apple.application-identifier": "6Q7DE5C2G4springcloud.demo.app"
+        "com.apple.application-identifier": "6Q7DE5C2G4electron-pure.app"
       },
       "target": [
         {

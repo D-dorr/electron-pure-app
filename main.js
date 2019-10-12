@@ -1,14 +1,10 @@
 const {app, BrowserWindow} = require('electron')
 const electron = require('electron')
 const {requireModule} = require('./background-util')
-const fs = require('fs')
 const path = require('path')
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
 requireModule()
 
-global.sharedObj = {
-  fsModel: fs
-}
 let win
 let electronScreen
 function createWindow () {
